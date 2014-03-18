@@ -1,0 +1,84 @@
+Github is a very popular tool used by developers as a code versioning system. I too have been using git for some time and have been asked how to use it by many of my junior developers. Filly I am putting together the most basic things that you should know to start with Git and use it without any issues.
+
+Setting up your git
+
+1. First things first. Login to github.com, create your profile and download git for your machine - either Windows, Mac or Linux.
+
+
+
+
+Link: http://git-scm.com/downloads
+
+2. You will get Git Bash and Git GUI that are installed.
+
+
+
+
+
+
+
+
+
+3. Create a repository on Github.
+
+
+
+
+
+
+
+
+
+
+Using the Git Bash
+
+1. Open the Git Bash prompt.
+2. Check the location where your local git repo would be created
+pwd
+
+This would generally be /c/Users/admin. In case you want to change this location and move to D: drive, type
+
+cd d:
+
+This will change your current location to D: To check you can again type:
+
+pwd
+
+3. Once you are in your desired folder type the command
+
+git init
+
+This command will tell Windows that the current folder is now git track-able.
+
+4. Now create a dummy file which you would like to add to your repository. Let's say a readme doc. Type in the following command
+
+touch Readme.doc
+
+This command will create a new empty file "Readme.doc" at your current location.
+5. Now type in the following command.
+
+git status
+
+The prompt will show that the file "Readme.doc" is not track-able. (get exact error message from git prompt). This is because you did not tell git that this file is to be tracked.
+6. For the file to be tracked you need to add it to your local repo. You can do this with the next command.
+
+git add Readme.doc
+
+Now the file has become track-able.
+
+7. You can now commit this file to your local repo using the next command
+
+git commit -m "Dummy readme file added" Readme.doc
+
+This will commit this file Readme.doc with a commit message "Dummy readme file added"
+8. However at this point you haven't synced your local repo to your repo created on the Github site. To sync these 2 repos you need the next command
+
+git remote add origin <path to your repo.git - https://github.com/username/repo.git>
+
+Note: You need to code in your own git link in the above command
+
+9. You now need to push your changes from the local repo to the Github repo. To do this, the next command is:
+
+git push -u origin master
+
+This command will ask you for your Github username and password before commiting your changes to the master branch.
